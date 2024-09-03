@@ -1,15 +1,23 @@
+// App-level build.gradle.kts
 plugins {
+<<<<<<< Updated upstream
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+=======
+    id("com.android.application")
+>>>>>>> Stashed changes
     id("com.chaquo.python")
 }
 
 android {
+<<<<<<< Updated upstream
     ndkVersion = "27.0.11718014"
     namespace = "com.example.smishingdetectionapp"
+=======
+>>>>>>> Stashed changes
     compileSdk = 34
-
     defaultConfig {
+<<<<<<< Updated upstream
         ndk {
             // On Apple silicon, you can omit x86_64.
             abiFilters += listOf("arm64-v8a", "x86_64")
@@ -59,10 +67,19 @@ android {
 
     sourceSets {
         getByName("main").java.srcDirs("src/main/python")
+=======
+        applicationId = "com.example.myapp"
+        minSdk = 21
+        targetSdk = 34
+        versionCode = 1
+        versionName = "1.0"
+>>>>>>> Stashed changes
     }
+    // Other configurations if needed
 }
 
 dependencies {
+<<<<<<< Updated upstream
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.constraintlayout)
@@ -96,3 +113,9 @@ dependencies {
 
 }
 
+=======
+    implementation("com.android.volley:volley:1.2.1")
+    // Chaquopy dependency
+    implementation("com.chaquo.python:chaquopy:12.1.0")
+}
+>>>>>>> Stashed changes
