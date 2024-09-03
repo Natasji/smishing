@@ -1,26 +1,20 @@
 // App-level build.gradle.kts
 plugins {
-<<<<<<< Updated upstream
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
-=======
-    id("com.android.application")
->>>>>>> Stashed changes
     id("com.chaquo.python")
+    id("org.jetbrains.kotlin.plugin.compose") version "2.0.20" // this version matches your Kotlin version
 }
 
 android {
-<<<<<<< Updated upstream
     ndkVersion = "27.0.11718014"
     namespace = "com.example.smishingdetectionapp"
-=======
->>>>>>> Stashed changes
     compileSdk = 34
+
     defaultConfig {
-<<<<<<< Updated upstream
         ndk {
             // On Apple silicon, you can omit x86_64.
-            abiFilters += listOf("arm64-v8a", "x86_64")
+            abiFilters += listOf("armeabi-v7a", "arm64-v8a", "x86", "x86_64")
         }
         applicationId = "com.example.smishingdetectionapp"
         minSdk = 24
@@ -67,19 +61,11 @@ android {
 
     sourceSets {
         getByName("main").java.srcDirs("src/main/python")
-=======
-        applicationId = "com.example.myapp"
-        minSdk = 21
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
->>>>>>> Stashed changes
     }
     // Other configurations if needed
 }
 
 dependencies {
-<<<<<<< Updated upstream
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.constraintlayout)
@@ -110,12 +96,5 @@ dependencies {
     implementation ("com.squareup.retrofit2:converter-gson:2.11.0")
     implementation ("com.squareup.retrofit2:converter-simplexml:2.11.0")
     implementation ("com.google.android.material:material:1.2.0-alpha02")
-
 }
 
-=======
-    implementation("com.android.volley:volley:1.2.1")
-    // Chaquopy dependency
-    implementation("com.chaquo.python:chaquopy:12.1.0")
-}
->>>>>>> Stashed changes
