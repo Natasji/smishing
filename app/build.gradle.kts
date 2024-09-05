@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
     id("com.chaquo.python")
+    id("org.jetbrains.kotlin.plugin.compose") version "2.0.20" // this version matches your Kotlin version
 }
 
 android {
@@ -17,7 +18,7 @@ android {
     defaultConfig {
         ndk {
             // On Apple silicon, you can omit x86_64.
-            abiFilters += listOf("arm64-v8a", "x86_64")
+            abiFilters += listOf("armeabi-v7a", "arm64-v8a", "x86", "x86_64")
         }
         applicationId = "com.example.smishingdetectionapp"
         minSdk = 24
@@ -98,10 +99,5 @@ dependencies {
     implementation(files("libs/activation.jar"))
     implementation(files("libs/additionnal.jar"))
     implementation(files("libs/mail.jar"))
-
-
-
-
-
 }
 
